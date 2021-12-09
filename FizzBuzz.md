@@ -24,6 +24,7 @@ procedure AvailabilityCheck(Geraetetyp, Entleihbeginn, Entleihdauer)
         if (buchungsdaten[1] < Entleihbeginn)
             return GeraeteId
         endif
+
     endfor
 
     return 0
@@ -43,3 +44,14 @@ procedure AvailabilityCheck(Geraetetyp, Entleihbeginn, Entleihdauer)
 
     return 0
 endprocedure
+
+
+
+# Lösung
+
+METHODENSTART AvailabilityCheck PARAMETERLISTE Gerätetyp, Entleihbeginn, Entleihdauer
+
+bestandsListe : geräteId := getGeräteListe(Gerätetyp)
+
+
+METHODENENDE
